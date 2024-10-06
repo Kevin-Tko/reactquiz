@@ -1,8 +1,10 @@
-import { useQuiz } from "../context/QuestionProvider";
-
-export default function Finished() {
-    const { score, percentage, totalMarks, dispatch, highScore } = useQuiz();
-
+export default function Finished({
+    score,
+    percentage,
+    totalMarks,
+    dispatch,
+    highScore,
+}) {
     return (
         <>
             <p className="result">

@@ -1,11 +1,7 @@
-import { useQuiz } from "../context/QuestionProvider";
-
-export default function Button() {
-    const { index, questionsNumber, answer, dispatch } = useQuiz();
-
+export default function Button({ index, numquestions, answer, dispatch }) {
     if (answer === null) return null;
 
-    if (index < questionsNumber - 1) {
+    if (index < numquestions - 1) {
         return (
             <button
                 className="btn btn-ui"
@@ -20,7 +16,7 @@ export default function Button() {
         );
     }
 
-    if (index === questionsNumber - 1) {
+    if (index === numquestions - 1) {
         return (
             <button
                 className="btn btn-ui"

@@ -1,8 +1,5 @@
 import { useEffect } from "react";
-import { useQuiz } from "../context/QuestionProvider";
-
-export default function Timer() {
-    const { dispatch, time } = useQuiz();
+export default function Timer({ dispatch, time }) {
     //UseEffect to create a timer
     useEffect(
         function () {

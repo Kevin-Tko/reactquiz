@@ -1,16 +1,19 @@
 import Timer from "./Timer";
 import Button from "./Buttons";
-import { useQuiz } from "../context/QuestionProvider";
 
-export default function Footer() {
-    const { answer, dispatch, index, questionsNumber, time } = useQuiz();
-
+export default function Footer({
+    answer,
+    dispatch,
+    index,
+    numQuestions,
+    time,
+}) {
     return (
         <footer>
             <Timer dispatch={dispatch} time={time} />
             <Button
                 index={index}
-                numquestions={questionsNumber}
+                numquestions={numQuestions}
                 answer={answer}
                 dispatch={dispatch}
             />
